@@ -1,0 +1,26 @@
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[user]
+	name = Jean-Sébastien Franck
+	email = jsebfranck@gmail.com
+[alias]
+        l = log --graph --decorate --pretty=oneline --abbrev-commit
+        la = log --graph --decorate --pretty=oneline --abbrev-commit --all
+        st = status
+        ci = commit
+        br = branch
+        co = checkout
+        df = diff
+        who = shortlog -s --        
+[color]
+        # Only needed for Git < 1.8.4 as it is the new default
+        ui = auto
+[pull]
+        rebase = true
+[push]
+        default = simple
+[credential]
+	helper = osxkeychain
+[url "https://github.com/"]
+	insteadOf = git://github.com/
